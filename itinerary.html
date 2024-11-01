@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Itinerary</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <h1>Your Travel Itinerary</h1>
+        <button onclick="window.location.href='index.html'">Home</button>
+    </nav>
+    <div id="itinerarySection" class="hidden">
+        <h2>Travel Itinerary</h2>
+        <form id="itineraryForm">
+            <center><input type="text" id="destinationInput" placeholder="Destination" required /></center>
+            <center><input type="text" id="noteInput" placeholder="Notes (e.g., Visit museums)" required /></center>
+            <input type="date" id="dateInput" required />
+            <input type="time" id="timeInput" required />
+            <center><button type="submit">Create Itinerary</button></center>
+        </form>
+        
+        <div id="it" class="card hidden">
+            <h3>Itinerary List</h3>
+            <ul id="itineraryList"></ul>
+        </div>
+    </div>
+
+<div id="modal" class="modal">
+    <div class="modal-content">
+        <p id="modal-text"></p>
+        <button onclick="closeModal()">Close</button>
+    </div>
+</div>
+
+<div id="editModal" class="modal">
+<div class="modal-content">
+    <input type="text" id="editDestinationInput" placeholder="Edit Destination" />
+    <input type="text" id="editNoteInput" placeholder="Edit Note" />
+    <input type="date" id="editDateInput" />
+    <input type="time" id="editTimeInput" />
+    <button onclick="updateItineraryItem()">Update</button>
+    <button onclick="closeEditModal()">Cancel</button>
+</div>
+</div>
+
+<div class="container">
+    <div class="side">
+      <img src="lon.jpg" alt="Image 1">
+      <button onclick="window.location.href='index.html'">Back</button>
+    </div>
+    <div class="side">
+      <img src="sg.jpg" alt="Image 2">
+      <button onclick="window.location.href='index.html'">Back</button>
+    </div>
+  </div>
+  
+  <footer class="footer">
+    <div class="footer-content">
+        <div class="footer-links">
+            <a href="about.html">About Us</a> |
+            <a href="contact.html">Contact</a> |
+            <a href="privacy.html">Privacy Policy</a> |
+            <a href="terms.html">Terms of Service</a>
+        </div>
+        <p class="footer-description">
+            World Explorer - Your companion for exploring the world and discovering popular attractions. 
+            Easily add landmarks to your itinerary and start planning your next adventure!
+        </p>
+        <p class="footer-copyright">
+            &copy; 2024 World Explorer. All rights reserved.
+        </p>
+    </div>
+</footer>
+
+<script src="renderer.js"></script>
+</body>
+</html>

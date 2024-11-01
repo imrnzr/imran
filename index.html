@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>World Explorer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <h1>World Explorer</h1>
+        <div class="nav-links">
+            <button onclick="showFavorites()">Favorites</button>
+            <button onclick="window.location.href='itinerary.html'">Itinerary</button>
+        </div>
+    </nav>
+
+    <div class="page-layout">
+
+        <aside class="sidebar">
+            <div class="landmark">
+                <img src="kolner.jpg" alt="Eiffel Tower">
+            </div>
+            <div class="landmark">
+                <img src="eiffel.jpg" alt="Colosseum">
+            </div>
+            <div class="landmark">
+                <img src="square.jpg" alt="Colosseum">
+            </div>
+        </aside>
+
+        <div class="content">
+            <h2>Welcome to World Explorer!</h2>
+            <p class="intro">
+                Discover the beauty of our planet with World Explorer! 
+                Whether you're planning your next adventure or simply exploring from home, 
+                our application provides you with suggestions for countries to visit. 
+                You can easily find notable attractions in each country, 
+                helping you create the perfect itinerary for your travels.
+            </p>
+            <h2>Search for a Country</h2>
+            <div class="search-container">
+                <input type="text" id="countryInput" placeholder="Enter a country name"/>
+                <button class="search-button" onclick="searchCountry()">Search</button>
+            </div>
+
+            <div id="countryInfo" class="card"></div>
+            <div id="nearbyCountries" class="card hidden">
+                <h3>Nearby Countries</h3>
+                <ul id="nearbyCountriesList"></ul>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <p id="modal-text"></p>
+            <button onclick="closeModal()">Close</button>
+        </div>
+    </div>
+
+<footer class="footer">
+    <div class="footer-content">
+        <div class="footer-links">
+            <a href="about.html">About Us</a> |
+            <a href="contact.html">Contact</a> |
+            <a href="privacy.html">Privacy Policy</a> |
+            <a href="terms.html">Terms of Service</a>
+        </div>
+        <p class="footer-description">
+            World Explorer - Your companion for exploring the world and discovering popular attractions. 
+            Easily add landmarks to your itinerary and start planning your next adventure!
+        </p>
+        <p class="footer-copyright">
+            &copy; 2024 World Explorer. All rights reserved.
+        </p>
+    </div>
+</footer>
+
+    <script src="renderer.js"></script>
+</body>
+</html>
